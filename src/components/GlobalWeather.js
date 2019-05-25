@@ -9,11 +9,22 @@ class GlobalWeather extends React.Component {
     city: undefined,
     humidity: undefined,
     description: undefined,
-    error: undefined
+    error: undefined,
+    cityName: "Dhaka"
   };
+
+  handleChange = event => {
+    event.preventDefault();
+    this.setState({ cityName: event.target.value });
+    console.log(this.state.value);
+  };
+
   getWeather = async e => {
+    console.log(this.state.cityName);
     e.preventDefault();
-    const city = e.target.elements.city.value;
+
+    // console.log(e.target.elements.form);
+    const city = this.state.cityName;
     const api_call = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
     );
@@ -40,7 +51,11 @@ class GlobalWeather extends React.Component {
   render() {
     return (
       <div>
-        <Form getWeather={this.getWeather} />
+        <Form
+          cityName={this.state.cityName}
+          handleChange={this.handleChange}
+          getWeather={this.getWeather}
+        />
         <GlobalWeatherView
           temperature={this.state.temperature}
           city={this.state.city}
