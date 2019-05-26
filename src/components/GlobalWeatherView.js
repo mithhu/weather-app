@@ -3,13 +3,22 @@ import React from "react";
 const GlobalWeatherView = props => (
   <div>
     {props.city && (
-      <div>
-        <p>Location: {props.temperature}</p>
-        <p>Humidity: {props.humidity}</p>
-        <p>Condition: {props.description}</p>
+      <div className="weather-global__info">
+        <p className="weather__key">
+          Temperature:
+          <span className="weather__value"> {props.temperature}&#176;</span>
+        </p>
+        <p className="weather__key">
+          Humidity:
+          <span className="weather__value"> {props.humidity}%</span>
+        </p>
+        <p className="weather__key">
+          Condition:
+          <span className="weather__value"> {props.description}</span>
+        </p>
       </div>
     )}
-    {props.error && <p>{props.error}</p>}
+    {props.error && <p className="weather__error">{props.error}</p>}
   </div>
 );
 

@@ -22,8 +22,6 @@ class GlobalWeather extends React.Component {
   getWeather = async e => {
     console.log(this.state.cityName);
     e.preventDefault();
-
-    // console.log(e.target.elements.form);
     const city = this.state.cityName;
     const api_call = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
@@ -50,7 +48,7 @@ class GlobalWeather extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="form-container">
         <Form
           cityName={this.state.cityName}
           handleChange={this.handleChange}

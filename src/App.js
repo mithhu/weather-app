@@ -1,12 +1,15 @@
 import React from "react";
 import LocalWeather from "./components/LocalWeather";
 import GlobalWeather from "./components/GlobalWeather";
+import Title from "./components/Title";
 
 const App = () => (
   <div>
-    <h1>Weather App</h1>
-    <LocalWeather />
-    <GlobalWeather />
+    <Title />
+    <div className="container">
+      <LocalWeather />
+      <GlobalWeather />
+    </div>
   </div>
 );
 export default App;

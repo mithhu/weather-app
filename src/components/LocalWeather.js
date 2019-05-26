@@ -38,14 +38,11 @@ class LocalWeather extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>Local Weather</p>
-        <LocalWeatherView
-          temperature={this.state.temperature}
-          city={this.state.city}
-          error={this.state.error}
-        />
-      </div>
+      <LocalWeatherView
+        temperature={this.state.temperature}
+        city={this.state.city}
+        error={this.state.error}
+      />
     );
   }
 }
