@@ -1,5 +1,5 @@
 var CACHE_NAME = "waether-app";
-var urlsToCache = ["/", "/completed"];
+var urlsToCache = ["./index.html"];
 
 // Install a service worker
 self.addEventListener("install", event => {
