@@ -16,6 +16,7 @@ class GlobalWeather extends React.Component {
     cityName: "Dhaka District"
   };
 
+  //changes when a city is selected
   handleChange = e => {
     this.setState({ cityName: e.target.value, city: "" });
   };
@@ -47,6 +48,7 @@ class GlobalWeather extends React.Component {
     }
   };
 
+  //changes the state of city to empty string after 5 nminutes
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState({ city: "" });

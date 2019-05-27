@@ -35,6 +35,7 @@ class LocalWeather extends React.Component {
     });
   };
 
+  //refreshes the local weather after 5 minutes
   componentDidMount() {
     this.getWeather();
     this.interval = setInterval(() => {
