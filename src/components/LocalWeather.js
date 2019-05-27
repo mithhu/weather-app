@@ -1,12 +1,16 @@
 import React from "react";
 import LocalWeatherView from "./LocalWeatherView";
-const API_KEY = "f64e34286ec3110a98b3b72018975f71";
+const API_KEY = "64b79216ffb01e7cef307089211c0a82";
+
+// "e42d044ef1b8d3c4f4c6f29bf06c4a2a";
+
+// "f64e34286ec3110a98b3b72018975f71";
 
 class LocalWeather extends React.Component {
   state = {
-    temperature: "",
-    city: "",
-    error: ""
+    temperature: undefined,
+    city: undefined,
+    error: undefined
   };
   getWeather = () => {
     navigator.geolocation.getCurrentPosition(async position => {
@@ -34,6 +38,13 @@ class LocalWeather extends React.Component {
 
   componentDidMount() {
     this.getWeather();
+    this.interval = setInterval(() => {
+      this.setState({ city: "" });
+      this.getWeather();
+    }, 300000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {

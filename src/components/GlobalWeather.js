@@ -1,7 +1,10 @@
 import React from "react";
 import GlobalWeatherView from "./GlobalWeatherView";
 import Form from "./Form";
-const API_KEY = "f64e34286ec3110a98b3b72018975f71";
+const API_KEY = "64b79216ffb01e7cef307089211c0a82";
+
+// "e42d044ef1b8d3c4f4c6f29bf06c4a2a";
+// "f64e34286ec3110a98b3b72018975f71";
 
 class GlobalWeather extends React.Component {
   state = {
@@ -13,14 +16,11 @@ class GlobalWeather extends React.Component {
     cityName: "Dhaka District"
   };
 
-  handleChange = event => {
-    event.preventDefault();
-    this.setState({ cityName: event.target.value, city: "" });
-    // console.log(this.state.value);
+  handleChange = e => {
+    this.setState({ cityName: e.target.value, city: "" });
   };
 
   getWeather = async e => {
-    // console.log(this.state.cityName);
     e.preventDefault();
     const city = this.state.cityName;
     const api_call = await fetch(
@@ -46,6 +46,7 @@ class GlobalWeather extends React.Component {
       });
     }
   };
+
   render() {
     return (
       <div className="form-container">
