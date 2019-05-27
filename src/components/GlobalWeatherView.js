@@ -2,7 +2,7 @@ import React from "react";
 
 const GlobalWeatherView = props => (
   <div>
-    //only shows the weather report when the imformations are retrieved from
+    only shows the weather report when the imformations are retrieved from
     server
     {props.city && (
       <div className="weather-global__info">

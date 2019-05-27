@@ -2,7 +2,7 @@ import React from "react";
 
 const LocalWeatherView = props => (
   <div className="localWeather__container">
-    //only shows this component when iformation of city is available
+    {/* only shows this component when iformation of city is available */}
     {props.city && (
       <div className="weather-local__info">
         <h2>You are from {props.city}</h2>
