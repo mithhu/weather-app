@@ -47,6 +47,15 @@ class GlobalWeather extends React.Component {
     }
   };
 
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState({ city: "" });
+    }, 300000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
     return (
       <div className="form-container">

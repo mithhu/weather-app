@@ -3,7 +3,6 @@ import LocalWeatherView from "./LocalWeatherView";
 const API_KEY = "64b79216ffb01e7cef307089211c0a82";
 
 // "e42d044ef1b8d3c4f4c6f29bf06c4a2a";
-
 // "f64e34286ec3110a98b3b72018975f71";
 
 class LocalWeather extends React.Component {
