@@ -5,22 +5,22 @@ const API_KEY = "f64e34286ec3110a98b3b72018975f71";
 
 class GlobalWeather extends React.Component {
   state = {
-    temperature: undefined,
-    city: undefined,
-    humidity: undefined,
-    description: undefined,
-    error: undefined,
-    cityName: "Dhaka"
+    temperature: "",
+    city: "",
+    humidity: "",
+    description: "",
+    error: "",
+    cityName: "Dhaka District"
   };
 
   handleChange = event => {
     event.preventDefault();
-    this.setState({ cityName: event.target.value });
-    console.log(this.state.value);
+    this.setState({ cityName: event.target.value, city: "" });
+    // console.log(this.state.value);
   };
 
   getWeather = async e => {
-    console.log(this.state.cityName);
+    // console.log(this.state.cityName);
     e.preventDefault();
     const city = this.state.cityName;
     const api_call = await fetch(
@@ -28,7 +28,7 @@ class GlobalWeather extends React.Component {
     );
     const data = await api_call.json();
     if (city && !data.message) {
-      console.log(data);
+      // console.log(data);
       this.setState({
         temperature: data.main.temp,
         city: data.name,

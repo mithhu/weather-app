@@ -4,9 +4,9 @@ const API_KEY = "f64e34286ec3110a98b3b72018975f71";
 
 class LocalWeather extends React.Component {
   state = {
-    temperature: undefined,
-    city: undefined,
-    error: undefined
+    temperature: "",
+    city: "",
+    error: ""
   };
   getWeather = () => {
     navigator.geolocation.getCurrentPosition(async position => {
