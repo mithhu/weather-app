@@ -114,7 +114,6 @@ h3 {
 @media (min-width: 768px) and (max-width: 1079px) {
   .container {
     display: flex;
-    height: 85vh;
   }
   .localWeather__container {
     background-image: url(../src/img/local.jpg);
