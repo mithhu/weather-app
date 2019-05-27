@@ -109,6 +109,10 @@ h3 {
   font-size: 30px;
 }
 
+.globalWeather__para {
+  margin-top: 10%;
+}
+
 /* Media queries */
 
 @media (min-width: 768px) and (max-width: 1079px) {

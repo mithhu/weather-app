@@ -4,8 +4,7 @@ class Form extends React.Component {
   render() {
     return (
       <form>
-        <h3>Global Weather</h3>
-        <p>Please select a city</p>
+        <p className="globalWeather__para">Please select a city</p>
         <select value={this.props.cityName} onChange={this.props.handleChange}>
           <option value="Dhaka District">Dhaka</option>
           <option value="Chittagong">Chittagong</option>
