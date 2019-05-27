@@ -13,7 +13,7 @@ body {
 
 .localWeather__container {
   background-image: url(../src/img/local-min.jpg);
-  height: 70vh;
+  height: 75vh;
   width: 100%;
   background-size: 100% 100%;
   background-position: center center;
@@ -85,7 +85,7 @@ option {
 
 .container {
   display: flex;
-  height: 70vh;
+  height: 75vh;
   text-align: center;
 }
 
